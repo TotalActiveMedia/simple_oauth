@@ -805,4 +805,24 @@ class TokenAuthUser implements TokenAuthUserInterface {
     throw new \Exception('Invalid use of getIterator in token authentication.');
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function toUrl($rel = 'canonical', array $options=[]){
+    return parent::toUrl($rel, $options);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function toLink($text=NULL,$rel='canonical',array $options = []){
+    return parent::toLink($text, $rel, $options);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function isNewTranslation(){
+    return parent::isNewTranslation();
+  }
 }
